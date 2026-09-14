@@ -36,9 +36,9 @@
 
 <div align="center">
 
-<img src="docs/images/keyboard-mouse.png" alt="Клавиатура и мышь в скине Summer с подсветкой нажатых кнопок" width="600">
+<img src="docs/images/keyboard-mouse-winter.png" alt="Клавиатура и мышь в скине Winter с подсветкой нажатых кнопок" width="600">
 
-*Keyboard + Mouse · Summer · пример подсветки нажатий*
+*Keyboard + Mouse · Winter · пример подсветки нажатий*
 
 <img src="docs/images/dualsense-rich-indigo.png" alt="Оверлей DualSense в сине-фиолетовом скине Rich Indigo" width="480">
 
@@ -84,8 +84,8 @@
 
    | Архив | Чем распаковать |
    | --- | --- |
-   | [**Game-Overlay-1.0.1-win-x64.7z**](https://github.com/sup4ek/Game-Overlay/releases/download/v1.0.1/Game-Overlay-1.0.1-win-x64.7z) | 7-Zip |
-   | [**Game-Overlay-1.0.1-win-x64.rar**](https://github.com/sup4ek/Game-Overlay/releases/download/v1.0.1/Game-Overlay-1.0.1-win-x64.rar) | WinRAR |
+   | [**Game-Overlay-1.0.2-win-x64.7z**](https://github.com/sup4ek/Game-Overlay/releases/download/v1.0.2/Game-Overlay-1.0.2-win-x64.7z) | 7-Zip |
+   | [**Game-Overlay-1.0.2-win-x64.rar**](https://github.com/sup4ek/Game-Overlay/releases/download/v1.0.2/Game-Overlay-1.0.2-win-x64.rar) | WinRAR |
 
 3. Распакуйте **всю папку `Game Overlay`** в удобное место.
 4. Откройте её и запустите **`Game Overlay.exe`**.
@@ -138,7 +138,7 @@ Gamepad Viewer могла его обнаружить.
 ## 💡 Несколько советов
 
 - Начните со стандартного размера и подберите положение, где устройство не перекрывает важные элементы игры.
-- Используйте монохромный скин для спокойного оформления, а Summer — когда нужно выделить нажатия.
+- Используйте монохромный скин для спокойного оформления, а Winter — когда нужно выделить нажатия.
 - Ширина и высота геймпада масштабируются независимо: меняя только одну сторону, вы меняете пропорции рисунка.
 - После отключения монитора приложение возвращает оверлей в видимую область экрана.
 

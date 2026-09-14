@@ -1,6 +1,6 @@
 {
   "name": "keyboard-overlay-fixed-merged",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Keyboard overlay with the original visual design and a Windows low-level keyboard hook",
   "main": "main.js",
   "scripts": {

@@ -28,13 +28,16 @@ function installTheme(theme, layout) {
   // Keeping the original body underneath preserves holes and transparent edges.
   // Follow the inward curve alongside the touchpad before widening towards
   // the handles. The face buttons belong entirely on these outer panels.
-  const dsPlates = 'M0 98H234L248 209Q252 246 262 267C204 319 146 415 115 521Q96 580 105 639H0Z M560 98H794V639H689Q698 580 679 521C648 415 590 319 532 267Q542 246 546 209Z';
-  const dsTouchpad = 'M244 105Q397 94 550 105L535 226Q532 259 499 261H292Q260 259 254 229Z';
+  // Keep light strips and the black stick insert outside every finish, including pearl.
+  // The lower seam bends outward to the handle tips; do not curve back into the black strip.
+  // Trace below the curved L1/R1 silhouettes rather than painting from their top edge.
+  const dsPlates = 'M0 138H90C120 123 168 114 204 113L228 119L240 209Q244 246 250 267C192 319 130 415 99 521C91 550 81 583 69 603Q60 617 50 624V639H0Z M566 119L590 113C626 114 674 123 704 138H794V639H744V624Q734 617 725 603C713 583 703 550 695 521C664 415 602 319 544 267Q550 246 554 209Z';
+  const dsTouchpad = 'M248 109Q397 100 546 109L527 225Q524 251 499 253H292Q268 251 262 225Z';
   const circle = (x, y, r) => `M${x-r} ${y}a${r} ${r} 0 1 0 ${2*r} 0a${r} ${r} 0 1 0 ${-2*r} 0Z`;
   // Follow the curved seam below LB/RB instead of cutting straight across them.
   const xboxShell = 'M0 242H134C171 211 231 190 307 189Q450 185 593 189C669 190 729 211 766 242H900V800H0Z' + circle(450, 244, 36) + circle(331, 481, 73) + circle(385, 333, 23) + circle(515, 333, 23) + 'M436 368H464Q478 368 478 383Q478 398 464 398H436Q422 398 422 383Q422 368 436 368Z';
   const clip = layout === 'dualsense'
-    ? (theme.fullShell ? 'inset(98px 0 0)' : `path("${dsPlates}${theme.remix ? '' : dsTouchpad}")`)
+    ? `path("${dsPlates}${theme.remix ? '' : dsTouchpad}")`
     : `path(evenodd, "${xboxShell}")`;
   const selector = layout === 'dualsense' ? '.controller.ds4' : '.controller.custom';
   let style = document.getElementById('overlay-gamepad-theme');
