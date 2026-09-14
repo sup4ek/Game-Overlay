@@ -269,8 +269,6 @@ node ../checks/run-electron-check.cjs renderer-smoke.cjs
 - **Базовый скин DualSense** — [dualsense_overlay](https://github.com/philipbry/dualsense_overlay) от **philipbry** ([исходный CSS](https://philipbry.github.io/dualsense_skin.css)).
 - **Базовый скин Xbox** — **Freeport XSX-Black** от [jayraydee](https://jayraydee.me/) ([исходный CSS](https://jayraydee.me/Assets/Freeport/XSX-Black/XSX.css)).
 
-Дополнительные расцветки DualSense и Xbox адаптированы в Game Overlay по предоставленным фотографиям и референсам контроллеров. Цвета, градиенты и узоры накладываются на базовые скины; их контуры доработаны для сохранения подсветки и неокрашиваемых частей корпуса.
-
 ---
 
 <div align="center">
