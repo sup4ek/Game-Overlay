@@ -1,0 +1,21 @@
+# Keep the repository focused on source code and maintained checks.
+/*
+!/.gitignore
+!/README.md
+!/Game Overlay/
+!/checks/
+
+**/node_modules/
+**/dist/
+**/*.log
+**/.env
+**/.env.*
+**/window-state.json
+**/window-state.json.tmp
+
+/checks/*
+!/checks/menu-state.test.cjs
+!/checks/renderer-smoke.cjs
+!/checks/gamepad-preview.cjs
+!/checks/run-electron-check.cjs
+!/checks/resize-build.cjs

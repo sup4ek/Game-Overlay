@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Overlay — Настройки</title>
+<link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div id="settings-layer" class="settings-layer">
+    <div class="settings-menu" role="region" aria-labelledby="settings-title">
+      <header class="settings-header">
+        <h1 id="settings-title"><span class="settings-dot" aria-hidden="true"></span>Настройки</h1>
+        <div class="settings-header-actions">
+        <span class="settings-shortcut" aria-hidden="true"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>M</kbd></span>
+        <button id="retry-gamepad" class="settings-reconnect" type="button" title="Переподключить устройство" aria-label="Переподключить устройство"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 6.1A8 8 0 0 1 20 12M4 12a8 8 0 0 0 13.9 5.9"/></svg></button>
+        <button id="close-settings" class="settings-shortcut" type="button" aria-label="Закрыть настройки (Ctrl + Alt + M)" title="Закрыть · Ctrl + Alt + M">
+          <span aria-hidden="true">×</span>
+        </button>
+        </div>
+      </header>
+      <div class="settings-field">
+        <label for="device-select">Устройство</label>
+        <select id="device-select"><option value="keyboard">Клавиатура</option><option value="gamepad">Геймпад</option></select>
+      </div>
+      <div class="settings-field">
+        <label for="layout-select">Форм-фактор</label>
+        <select id="layout-select"></select>
+      </div>
+      <div class="settings-field" id="skin-field">
+        <label for="skin-select">Скин</label>
+        <div class="skin-control"><span id="skin-swatches" class="skin-swatches" aria-hidden="true"></span><select id="skin-select" aria-label="Скин клавиатуры"></select></div>
+      </div>
+      <div class="settings-dimensions">
+        <div class="settings-field"><label for="overlay-width">Ширина</label><div class="settings-input"><input id="overlay-width" type="number" step="1" required aria-label="Ширина" aria-describedby="settings-message"><span>px</span></div></div>
+        <div class="settings-field"><label for="overlay-height">Высота</label><div class="settings-input"><input id="overlay-height" type="number" step="1" required aria-label="Высота" aria-describedby="settings-message"><span>px</span></div></div>
+      </div>
+      <p id="settings-message" class="settings-message" role="status"></p>
+      <div id="gamepad-status" class="gamepad-status" hidden><span id="gamepad-status-text" role="status"></span></div>
+      <div class="settings-actions">
+        <button id="move-overlay" type="button" title="Переместите оверлей мышью, затем нажмите Enter">Перетащить</button>
+        <button id="quit-app" class="settings-exit" type="button">Выход</button>
+      </div>
+      <footer class="settings-credit">by supchek</footer>
+    </div>
+  </div>
+<script src="skins.js"></script>
+<script src="gamepad-skins.js"></script>
+<script src="layouts.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

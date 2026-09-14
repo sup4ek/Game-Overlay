@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Overlay</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mouse.css">
+</head>
+<body>
+  <section class="overlay-layout">
+    <div class="keyboard">
+      <div class="board">
+        <div class="row row-1">
+          <div class="key" data-key="Escape">Esc</div>
+          <div class="key" data-key="Digit1">1 !</div>
+          <div class="key" data-key="Digit2">2 @</div>
+          <div class="key" data-key="Digit3">3 #</div>
+          <div class="key" data-key="Digit4">4 $</div>
+          <div class="key" data-key="Digit5">5 %</div>
+        </div>
+        <div class="row row-2">
+          <div class="key wide tab" data-key="Tab">→|</div>
+          <div class="key" data-key="KeyQ">Q</div>
+          <div class="key" data-key="KeyW">W</div>
+          <div class="key" data-key="KeyE">E</div>
+          <div class="key" data-key="KeyR">R</div>
+          <div class="key" data-key="KeyT">T</div>
+        </div>
+        <div class="row row-3">
+          <div class="key wide caps" data-key="CapsLock">↑</div>
+          <div class="key" data-key="KeyA">A</div>
+          <div class="key" data-key="KeyS">S</div>
+          <div class="key" data-key="KeyD">D</div>
+          <div class="key" data-key="KeyF">F</div>
+          <div class="key" data-key="KeyG">G</div>
+        </div>
+        <div class="row row-4">
+          <div class="key wide lshift" data-key="ShiftLeft">↑</div>
+          <div class="key" data-key="KeyZ">Z</div>
+          <div class="key" data-key="KeyX">X</div>
+          <div class="key" data-key="KeyC">C</div>
+          <div class="key" data-key="KeyV">V</div>
+        </div>
+        <div class="row row-5">
+          <div class="key ctrl" data-key="ControlLeft">Ctrl</div>
+          <div class="key cmd" data-key="MetaLeft">Cmd</div>
+          <div class="key alt" data-key="AltLeft">Alt</div>
+          <div class="key space" data-key="Space">—</div>
+        </div>
+      </div>
+    </div>
+    <div class="mouse-area">
+<svg class="mouse" viewBox="0 0 180 260" role="img">
+          <title>Mouse</title>
+          <path class="shell" d="M90 14 C52 14 29 37 26 78 L20 175 C17 220 43 246 90 246 C137 246 163 220 160 175 L154 78 C151 37 128 14 90 14Z"/>
+          <path class="palm" d="M30 130 Q90 151 150 130 L154 177 C157 216 134 238 90 238 C46 238 23 216 26 177Z"/>
+          <path class="rim" d="M31 175 C29 211 48 230 90 230 C132 230 151 211 149 175"/>
+          <g class="mouse-button left" data-part="left"><path d="M82 24 C53 26 37 46 35 79 L32 111 Q56 126 82 116Z"/><text x="56" y="92">L</text></g>
+          <g class="mouse-button right" data-part="right"><path d="M98 24 C127 26 143 46 145 79 L148 111 Q124 126 98 116Z"/><text x="124" y="92">R</text></g>
+          <g class="mouse-button middle" data-part="middle"><rect x="84" y="42" width="12" height="39" rx="6"/><path class="wheel-lines" d="M87 49h6M87 55h6M87 61h6M87 67h6M87 73h6"/></g>
+          <g class="mouse-button side5" data-part="side5"><path d="M20 125 Q14 125 13 131 L11 148 Q11 154 17 154 L23 152 L25 127Z"/></g>
+          <g class="mouse-button side4" data-part="side4"><path d="M17 160 Q11 161 11 167 L11 184 Q12 190 18 189 L23 186 L22 160Z"/></g>
+          <path class="seam" d="M90 91v29"/>
+          <g class="palm-mark"><path d="M81 190v8M90 186v16M99 190v8"/></g>
+        </svg>
+    </div>
+  </section>
+  <div class="move-hint">Перетащите клавиатуру · Enter — готово</div>
+  <script src="skins.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

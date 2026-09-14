@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, Arial, sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.keyboard {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background: #020202;
+  background-image: radial-gradient(100% 150% ellipse at top center, #1c1c1c 0%, #020202 100%);
+  border-radius: 8px;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: inset 0 0 12px #020202;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 4px;
+}
+
+.key {
+  --color: rgb(70, 191, 176);
+  --glow: rgba(70, 191, 176, 0.5);
+  --inner: rgba(70, 191, 176, 0.08);
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  color: var(--color);
+  background: #080808;
+  border-radius: 5px;
+  font-size: clamp(13px, 4.2vw, 24px);
+  font-weight: 400;
+  line-height: 1;
+  user-select: none;
+  white-space: nowrap;
+  text-shadow: 0 0 7px var(--color);
+  box-shadow:
+    inset 0 -2px 0 var(--inner),
+    inset 2px 0 0 rgba(0,0,0,.75),
+    inset -2px 0 0 rgba(0,0,0,.75),
+    inset 0 2px 0 var(--inner),
+    inset 0 -8px 10px var(--inner),
+    0 0 10px var(--glow);
+  transition: transform 35ms ease-out, filter 35ms ease-out, background 35ms ease-out, box-shadow 35ms ease-out;
+}
+
+.key.active {
+  transform: translateY(3px) scale(0.97);
+  filter: brightness(2.35) saturate(1.25);
+  background: #242424;
+  box-shadow:
+    inset 0 -2px 0 var(--color),
+    inset 2px 0 0 rgba(0,0,0,.65),
+    inset -2px 0 0 rgba(0,0,0,.65),
+    inset 0 2px 0 var(--color),
+    inset 0 -8px 10px var(--inner),
+    0 0 16px var(--glow),
+    0 0 28px var(--glow);
+}
+
+.tab { flex: 1.5 1 0; }
+.caps { flex: 1.7 1 0; }
+.lshift { flex: 2.15 1 0; }
+.ctrl, .cmd, .alt { flex: 1.35 1 0; }
+.space { flex: 3.7 1 0; }
+
+/* Keyboard crop matching the reference: only Esc–4, Tab–R, Caps–F,
+   Shift–C and Ctrl/Cmd/Alt + Space are shown. */
+
+
+/* Native dragging is enabled by the menu's Move action until Enter. */
+body, body * {
+  -webkit-app-region: no-drag !important;
+}
+
+body.drag-mode,
+body.drag-mode * {
+  -webkit-app-region: drag !important;
+  cursor: move !important;
+}
+.move-hint { display: none; position: fixed; bottom: 8px; left: 50%; transform: translateX(-50%); padding: 6px 9px; border: 1px solid #526c7d; border-radius: 6px; background: #14212ff0; color: #d3edff; font: 11px "Segoe UI", sans-serif; white-space: nowrap; pointer-events: none; }
+body.drag-mode .move-hint { display: block; max-width: calc(100% - 16px); white-space: normal; text-align: center; }
+body.drag-mode .keyboard { outline: 2px solid #52b6ee; outline-offset: -2px; }
+
+/* Original: black surfaces with neutral legends, no colored lighting. */
+body[data-layout="dualsense"] .keyboard,
+body[data-layout="dualsense"] .mouse,
+body[data-layout="xbox"] .keyboard,
+body[data-layout="xbox"] .mouse { display: none; }
+body.monochrome .keyboard { background: #030303; }
+body.monochrome .key {
+  color: #777;
+  background: #080808;
+  text-shadow: none;
+  box-shadow: inset 0 1px 0 #202020, inset 0 -3px 0 #020202, 0 0 0 1px #161616;
+}
+body.monochrome .key.active {
+  background: #242424;
+  box-shadow: inset 0 1px 0 #505050, inset 0 -2px 0 #111, 0 0 0 1px #393939;
+}

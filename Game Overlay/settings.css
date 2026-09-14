@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+.settings-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  overflow: auto;
+  background: transparent;
+  color: #ecedf0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color-scheme: dark;
+}
+.settings-menu {
+  width: 100%;
+  max-width: 362px;
+  padding: 16px;
+  border: 1px solid #303339;
+  border-radius: 12px;
+  background: #141619;
+  box-shadow: 0 12px 32px #0006;
+}
+.settings-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px; }
+.settings-header h1 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 14px; font-weight: 600; }
+.settings-dot { width: 6px; height: 6px; border-radius: 50%; background: #52b6ee; }
+.settings-shortcut { display: flex; align-items: center; gap: 3px; border: 0; padding: 2px; background: transparent; color: #a4aab3; cursor: pointer; }
+.settings-shortcut kbd { padding: 3px 5px; border: 1px solid #35383e; border-radius: 4px; background: #1c1f23; font: 10px "Segoe UI", sans-serif; }
+.settings-shortcut > span { margin-left: 5px; font-size: 18px; }
+.settings-shortcut:hover { color: #fff; }
+.settings-field { min-width: 0; margin-bottom: 12px; }
+.settings-field label { display: flex; justify-content: space-between; margin-bottom: 6px; color: #a4acb8; font-size: 11px; }
+.settings-field label > span { color: #818996; font-size: 10px; }
+.settings-menu select, .settings-input {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  border: 1px solid #34383f;
+  border-radius: 6px;
+  background: #1c1f24;
+  color: #ecedf0;
+  font: 12px "Segoe UI", Arial, sans-serif;
+}
+.settings-menu select:not(:disabled) { cursor: pointer; }
+.settings-menu select:not(:disabled):hover { border-color: #586675; }
+.settings-menu :focus-visible { outline: 2px solid #52b6ee; outline-offset: 2px; }
+.skin-control { position: relative; }
+.skin-control select { padding-left: 38px; }
+.skin-swatches { position: absolute; top: 11px; left: 11px; display: flex; gap: 3px; pointer-events: none; }
+.skin-swatches i { width: 4px; height: 12px; border-radius: 2px; }
+.settings-dimensions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.settings-input { display: flex; align-items: center; }
+.settings-input input { width: 100%; min-width: 0; border: 0; padding: 0; background: transparent; color: inherit; font: inherit; }
+.settings-input span { font-size: 10px; color: #818996; }
+.settings-pending select, .settings-pending input { color: #929aa6; opacity: 1; cursor: not-allowed; }
+.settings-actions { display: grid; grid-template-columns: 1fr 76px; gap: 10px; padding-top: 12px; border-top: 1px solid #2b2e34; }
+.settings-actions button { height: 35px; border: 1px solid #34414c; border-radius: 6px; background: #1b252d; color: #889eae; font: 12px "Segoe UI", Arial, sans-serif; cursor: not-allowed; }
+.settings-actions .settings-exit { border-color: #34383f; background: transparent; color: #858d99; }
+.settings-actions button:not(:disabled) { cursor: pointer; color: #a4daf9; border-color: #344b5a; }
+.settings-actions button:not(:disabled):hover { background: #283c4a; }
+.settings-actions .settings-exit:not(:disabled) { color: #c0c6ce; border-color: #444952; }
+.settings-actions .settings-exit:not(:disabled):hover { color: #ffc2c2; background: #392329; }
+.settings-message { min-height: 28px; margin: -3px 0 8px; color: #969eaa; font-size: 10px; line-height: 14px; }
+.settings-message.error { color: #ffaaaa; }
+.settings-input:focus-within { border-color: #52b6ee; }
+.settings-header { -webkit-app-region: drag; }
+.settings-header button { -webkit-app-region: no-drag; }
+.settings-credit { margin-top: 6px; color: #818996; text-align: center; font-size: 10px; line-height: 12px; }
+
+.gamepad-status { margin: 0 0 12px; display: flex; align-items: center; gap: 12px; font-size: 10px; line-height: 14px; color: #969eaa; }
+.gamepad-status[hidden] { display: none; }
+.gamepad-status > span { flex: 1; min-width: 0; }
+.gamepad-status.error { color: #ffaaaa; }
+.settings-header-actions { display: flex; align-items: center; gap: 8px; }
+.settings-reconnect { flex: none; width: 28px; height: 28px; display: grid; place-items: center; color: #929aa6; background: transparent; border: 1px solid #34383f; border-radius: 6px; padding: 5px; cursor: pointer; }
+.settings-reconnect:hover { color: #ecedf0; background: #1c1f24; border-color: #586675; }
+.settings-reconnect svg { width: 15px; height: 15px; }

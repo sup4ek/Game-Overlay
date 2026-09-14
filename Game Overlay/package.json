@@ -1,0 +1,40 @@
+{
+  "name": "keyboard-overlay-fixed-merged",
+  "version": "1.0.1",
+  "description": "Keyboard overlay with the original visual design and a Windows low-level keyboard hook",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable",
+    "test": "node --test ../checks/*.test.cjs"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.local.keyboardoverlay",
+    "productName": "Keyboard Overlay",
+    "asar": true,
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "icon": "assets/app.ico",
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "portable": {
+      "artifactName": "Keyboard Overlay.exe"
+    },
+    "asarUnpack": [
+      "keyboard-hook.ps1"
+    ]
+  }
+}
