@@ -11,6 +11,8 @@
 ![Devices](https://img.shields.io/badge/Форм--факторы-4-8B5CF6?style=flat-square)
 ![Skins](https://img.shields.io/badge/Скины-35-EC4899?style=flat-square)
 
+[**⬇ Скачать готовую программу**](https://github.com/sup4ek/Game-Overlay/releases/latest)
+
 [Установка](#-установка) · [Возможности](#-возможности) · [Управление](#-управление) · [Вопросы](#-частые-вопросы)
 
 <img src="docs/images/keyboard-mouse.png" alt="Клавиатура и мышь в скине Summer с подсветкой нажатых кнопок" width="600">
@@ -58,42 +60,35 @@
 
 ## 📦 Установка
 
-### Запуск из исходников
+**Скачайте, распакуйте и запустите. Node.js, npm и Git не нужны.**
 
-Понадобятся **Windows x64**, установленный **Node.js с npm** и **Git**.
-Команды ниже предназначены для PowerShell.
+1. Откройте [**последний релиз**](https://github.com/sup4ek/Game-Overlay/releases/latest).
+2. В разделе **Assets** скачайте один из архивов:
 
-```powershell
-# Скачать проект
-git clone https://github.com/sup4ek/Game-Overlay.git
+   | Архив | Чем распаковать |
+   | --- | --- |
+   | [**Game-Overlay-1.0.1-win-x64.7z**](https://github.com/sup4ek/Game-Overlay/releases/download/v1.0.1/Game-Overlay-1.0.1-win-x64.7z) | 7-Zip |
+   | [**Game-Overlay-1.0.1-win-x64.rar**](https://github.com/sup4ek/Game-Overlay/releases/download/v1.0.1/Game-Overlay-1.0.1-win-x64.rar) | WinRAR |
 
-# Перейти в каталог приложения
-cd "Game-Overlay/Game Overlay"
+3. Распакуйте **всю папку `Game Overlay`** в удобное место.
+4. Откройте её и запустите **`Game Overlay.exe`**.
 
-# Установить зависимости из lock-файла
-npm.cmd ci
+Оба архива содержат одну и ту же готовую программу для **Windows x64**.
+Выберите удобный формат — скачивать оба не требуется.
 
-# Запустить
-npm.cmd start
-```
+> **Важно:** запускайте EXE из распакованной папки. Файлы DLL и каталоги
+> `resources` и `locales` должны оставаться рядом с ним.
 
-> При запуске меню настроек открывается автоматически.
-> Для отображения геймпадов требуется интернет.
+Меню настроек откроется автоматически. Для отображения геймпадов нужен интернет.
 
-### Сборка portable EXE
+**Source code (zip / tar.gz)** на странице релиза и **Code → Download ZIP**
+содержат исходники. Для обычного запуска выбирайте архив **Game-Overlay-…** из таблицы выше.
 
-В каталоге приложения выполните:
+### Обновление
 
-```powershell
-npm.cmd run dist
-```
-
-Готовый файл: **`Game Overlay/dist/Keyboard Overlay.exe`** относительно корня репозитория.
-Его можно запускать без установки Node.js на компьютере пользователя.
-Имя EXE пока сохраняется от первоначальной версии проекта.
-
-**Code → Download ZIP** скачивает исходники, а не готовую программу.
-Сборки EXE и каталог `node_modules` в Git не хранятся.
+Завершите приложение через **«Выход»** в трее или настройках, скачайте новый
+архив и распакуйте его в отдельную папку. Запускайте EXE из новой папки.
+Настройки хранятся в профиле пользователя отдельно от файлов программы.
 
 ## 🚀 Первый запуск
 
@@ -176,7 +171,31 @@ Gamepad Viewer могла его обнаружить.
 
 ## 🛠️ Для разработчиков
 
+Этот раздел нужен только для изменения кода и самостоятельной сборки.
+Для использования приложения достаточно архива из [Releases](https://github.com/sup4ek/Game-Overlay/releases/latest).
+
 Стек: **Electron · JavaScript · HTML/CSS · PowerShell / C# / WinAPI**.
+
+<details>
+<summary><strong>Исходники, запуск и сборка через Node.js</strong></summary>
+
+Нужны Node.js с npm и Git. В PowerShell:
+
+```powershell
+git clone https://github.com/sup4ek/Game-Overlay.git
+cd "Game-Overlay/Game Overlay"
+npm.cmd ci
+npm.cmd start
+```
+
+Самостоятельная сборка:
+
+```powershell
+npm.cmd run dist
+```
+
+Результат — `dist/Keyboard Overlay.exe` в каталоге приложения.
+У этой сборки пока сохраняется первоначальное имя EXE.
 
 ```text
 Game-Overlay/
@@ -207,6 +226,8 @@ node ../checks/run-electron-check.cjs renderer-smoke.cjs
 Для этой проверки нужны интернет и доступная графическая сессия.
 Автоматические проверки используют синтетический ввод и не заменяют проверку
 физического контроллера в игре.
+
+</details>
 
 ## 🌱 Идеи для развития
 
