@@ -261,10 +261,15 @@ node ../checks/run-electron-check.cjs renderer-smoke.cjs
 
 ## 🤝 Благодарности
 
-Отображение геймпадов основано на **Gamepad Viewer**. В проекте используются
-оформление DualSense от **philipbry** и Xbox **Freeport XSX-Black от jayraydee**;
-ссылки на подключаемые ресурсы приведены в
-[техническом описании приложения](Game%20Overlay/README.md).
+Спасибо авторам исходных работ, на которых основано оформление Game Overlay:
+
+- **Клавиатура и её цветовые темы** — [It’s a Keyboard](https://codepen.io/numerical/pen/XWPwavz) автора **Cameron (numerical)**. Из этого референса адаптированы внешний вид клавиш и сезонные палитры; в приложении используются сокращённая раскладка и собственная обработка ввода.
+- **FreeFrontend** — [подборка CSS Keyboards](https://freefrontend.com/css-keyboards/), где референс клавиатуры опубликован под названием **RGB Mechanical Keyboard Grid**.
+- **Отображение геймпадов** — [Gamepad Viewer](https://gamepadviewer.com/).
+- **Базовый скин DualSense** — [dualsense_overlay](https://github.com/philipbry/dualsense_overlay) от **philipbry** ([исходный CSS](https://philipbry.github.io/dualsense_skin.css)).
+- **Базовый скин Xbox** — **Freeport XSX-Black** от [jayraydee](https://jayraydee.me/) ([исходный CSS](https://jayraydee.me/Assets/Freeport/XSX-Black/XSX.css)).
+
+Дополнительные расцветки DualSense и Xbox адаптированы в Game Overlay по предоставленным фотографиям и референсам контроллеров. Цвета, градиенты и узоры накладываются на базовые скины; их контуры доработаны для сохранения подсветки и неокрашиваемых частей корпуса.
 
 ---
 
